@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Rondos App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/png" href="assets/images/favicons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="assets/images/favicons/favicon.svg" />
+        <link rel="shortcut icon" href="assets/images/favicons/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Rondos" />
+        <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/compile/styl/style.styl">
+    </head>
+    <body>
+        <main class="main v-space h-space">
+            <div class="wrapper">
+                <header class="header flex">
+                    <h1 class="nondisplayed">Rondos App</h1>
+                    <img class="logo" src="assets/images/logo-light.svg" alt="Rondos Logo" class="logo">
+                </header>
+                <section id="form-section" class="form-section">
+                    <form id="teams-form" class="form__teams-form">
+                        <fieldset class="fieldset fieldset--textarea">
+                            <div class="label-container">
+                                <label for="names">Nombres de personas</label>
+                                <button type="button" class="clear-names-btn" onclick="clearSavedNames()" title="Borrar nombres guardados">x</button>
+                            </div>
+                            <textarea id="names" placeholder="Escribe un nombre por línea&#10;Ejemplo:&#10;Juan&#10;María&#10;Carlos"></textarea>
+                            <div class="hint">Un nombre por línea</div>
+                            <div class="error" id="names-error"></div>
+                        </fieldset>
+
+                        <fieldset class="fieldset fieldset--number">
+                            <label for="teams">Número de equipos</label>
+                            <input type="number" id="teams" min="2" value="2">
+                            <div class="error" id="teams-error"></div>
+                        </fieldset>
+
+                        <button type="submit">Generar Equipos</button>
+                    </form>
+                </section>
+
+                <div class="card card--results" id="results-section">
+                    <div id="teams-container"></div>
+                    <button class="back-button" onclick="location.reload()">Crear nuevos equipos</button>
+                </div>
+            </div>
+        </main>
+
+        <script type="module" src="assets/javascript/compile/main.js"></script>
+        
+    </body>
+</html>

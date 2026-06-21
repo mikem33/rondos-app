@@ -1,6 +1,7 @@
 {
-  "name": "Pandora Boilerplate",
-  "short_name": "Pandora Boilerplate",
+  "name": "Rondos - Generador de Equipos",
+  "short_name": "Rondos",
+  "description": "Crea equipos de forma aleatoria y guarda los nombres de tus jugadores",
   "icons": [
     {
       "src": "assets/images/favicons/web-app-manifest-192x192.png",
@@ -15,7 +16,10 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#667eea",
+  "background_color": "#667eea",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "start_url": "./"
 }

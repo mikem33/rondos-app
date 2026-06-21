@@ -1,6 +1,22 @@
 import { defineConfig } from 'vite'
+import fs from 'fs'
+import path from 'path'
 
 export default defineConfig({
+  plugins: [
+    {
+      name: 'copy-htaccess',
+      closeBundle() {
+        const src = path.resolve(__dirname, 'source/.htaccess')
+        const dest = path.resolve(__dirname, 'build/.htaccess')
+        if (fs.existsSync(src)) {
+          fs.copyFileSync(src, dest)
+        } else {
+          console.warn('[copy-htaccess] .htaccess not found at', src)
+        }
+      }
+    }
+  ],
   base: './',
   root: 'source',
   publicDir: false,

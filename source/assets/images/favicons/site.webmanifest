@@ -1,7 +1,7 @@
 {
-  "name": "Rondos - Generador de Equipos",
+  "name": "Rondos App",
   "short_name": "Rondos",
-  "description": "Crea equipos de forma aleatoria y guarda los nombres de tus jugadores",
+   "description": "Crea equipos de forma aleatoria y guarda los nombres de tus jugadores",
   "icons": [
     {
       "src": "assets/images/favicons/web-app-manifest-192x192.png",
@@ -19,7 +19,6 @@
   "theme_color": "#667eea",
   "background_color": "#667eea",
   "display": "standalone",
-  "orientation": "portrait-primary",
   "scope": "./",
   "start_url": "./"
 }
